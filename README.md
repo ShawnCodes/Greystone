@@ -14,7 +14,7 @@ Rest Client (for api testing)
 Rspec
 
 
-Installation
+**Installation**
 
 run Rails db:create && rails db:migrate
 run Rails S

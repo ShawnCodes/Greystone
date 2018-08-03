@@ -16,29 +16,30 @@ ActiveRecord::Schema.define(version: 2018_08_03_174948) do
   enable_extension "plpgsql"
 
   create_table "capitalizations", force: :cascade do |t|
-    t.integer "rate"
+    t.decimal "rate"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "expenses", force: :cascade do |t|
-    t.integer "taxes"
-    t.integer "insurance"
-    t.integer "repairs"
-    t.integer "administration"
-    t.integer "utility"
-    t.integer "management"
+    t.decimal "taxes"
+    t.decimal "insurance"
+    t.decimal "repairs"
+    t.decimal "administration"
+    t.decimal "utility"
+    t.decimal "management"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "rolls", force: :cascade do |t|
+    t.string "address"
     t.string "unit"
     t.date "vacancy"
-    t.integer "monthly"
-    t.integer "bedrooms"
-    t.integer "bathrooms"
-    t.integer "annual"
+    t.decimal "monthly"
+    t.decimal "bedrooms"
+    t.decimal "bathrooms"
+    t.decimal "annual"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

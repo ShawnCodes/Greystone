@@ -1,12 +1,12 @@
 class CreateExpenses < ActiveRecord::Migration[5.2]
   def change
     create_table :expenses do |t|
-      t.integer :taxes
-      t.integer :insurance
-      t.integer :repairs
-      t.integer :administration
-      t.integer :utility
-      t.integer :management
+      t.decimal :taxes
+      t.decimal :insurance
+      t.decimal :repairs
+      t.decimal :administration
+      t.decimal :utility
+      t.decimal :management
 
       t.timestamps
     end

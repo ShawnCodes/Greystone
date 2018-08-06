@@ -1,4 +1,4 @@
-class Api::V1::RollsController < ApplicationController
+class Api::V1::ExpensesController < ApplicationController
   # Since in this case there's only one user, we make all the post fetch to `/api/v1/expenses/1`
   # Assuming from a post fetch, we receive the following params: {id: 1, expense: {taxes: 123, insurance: 123, repairs: 123, administration: 123, utility: 123, management: 123}}
 

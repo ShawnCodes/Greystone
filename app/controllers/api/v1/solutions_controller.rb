@@ -12,9 +12,9 @@ class Api::V1::SolutionsController < ApplicationController
     debt_payment = debt_rate * # LoanProceeds
     debt_service = net_operating_income / debt_payment
     value = net_operating_income / @user.capitalization.rate
-    present_value = 0 # 0 / (1 + debt_rate) ** (12 * 10)
-    loan_amount =
-    output = {loan_amount: 123, debt_rate: 0.04954}
+    present_value = (1 + debt_rate) ** (12 * 10)
+    loan_amount = [value,debt_payment].min
+    output = {loan_amount: loan_amount, debt_rate: debt_payment}
     render json: output
   end
 
